@@ -16,4 +16,4 @@ ENV  USER=container HOME=/home/container
 
 WORKDIR /home/container
 RUN cd /home/container && curl -LJO https://raw.githubusercontent.com/jing-shiun/WinuxHub-dockerfile/main/entrypoint.sh
-CMD ["/usr/bin/bash", "entrypoint.sh"]
+CMD ["/usr/bin/bash", "{STARTUP}"]
