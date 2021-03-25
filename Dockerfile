@@ -13,6 +13,7 @@ RUN adduser --disabled-password --home /home/container container
 USER container
 ENV  USER=container HOME=/home/container
 
+
 WORKDIR /home/container
-RUN cd /home/container
+RUN cd /home/container && curl -LJO https://github.com/jing-shiun/WinuxHub-dockerfile/blob/main/entrypoint.sh
 CMD ["/usr/bin/bash", "entrypoint.sh"]
